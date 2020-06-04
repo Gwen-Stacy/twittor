@@ -1,8 +1,8 @@
 // imports
 importScripts('js/sw-utils.js');
 
-const STATIC_CACHE = 'static-v3';
-const DINAMIC_CACHE = 'dynamic-v1';
+const STATIC_CACHE = 'static-v4';
+const DINAMIC_CACHE = 'dynamic-v2';
 const INMUTABLE_CACHE = 'inmutable-v1';
 
 
@@ -60,6 +60,6 @@ self.addEventListener('fetch', e => {
                 return actualizaCacheDinamico(DINAMIC_CACHE, e.request, newRes);
             });
         }
-    })
+    });
     e.respondWith(respuesta);
-})
+});
